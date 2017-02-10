@@ -9,7 +9,9 @@ Answers to questions of Lab1-Linux (https://github.com/fuankarion/Vision17/tree/
 7. The tail -f command appends the output data as the file grows [1].
 8. The link command creates a link to an existing file [1].
 9. The text '#! /bin/bash' at the beginning of a script tells the shell what interpreter to run. [2]
-
+10. There are 38 users in the server. To inspect this we can use the command: cat /etc/passwd , because the file passwd contains the information about the users of the server. [7]
+11. 
+12. 
 13. To download the Berkely 500 database from the terminal, we use the command wget followed by the url of the file:
 wget http://www.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/BSR/BSR_bsds500.tgz
 To uncompress the .tgz file we use the tar command:
@@ -26,7 +28,7 @@ Which is a method to count files recursively within a directory's subdirectories
 15. Image files are in JPEG format. Their resolution (the number of pixels) can be found out through the package 'convert' from ImageMagick. First, we need to install ImageMakgick via apt-get install imagemagick. Then, we may perform the following command:
 convert 236017.jpg -print "Size: %wx%h\n" /dev/null, which returns the number of pixels of the image; 481x321 in this case [6].
 16. To know how many of these images have landscape orientation we may write a script which gets the size of each image file, such as in the previous question. The script would count only when the first dimension is greater than the second one. The resulting count will correspond to the number of landscape images, while the number of portrait images may be calculated substracting this number from the total number of images (square photographs will be considered portraits).
-17. From the imagemagick package, we can use the 'mogrify' program to crop all files 
+17. From the imagemagick package, we can use the 'mogrify' program to crop all the images so that they fit certain dimensions. To do this, we take advantage of the -crop geometry{widthxheight!}{} command. The values in widthxheight! set the new image dimensions after cropping, without preserving the original image ratio. These are forms of the geometry argument [8],[9].
 
 
 References
@@ -36,5 +38,9 @@ References
 [4] : http://askubuntu.com/questions/1224/how-do-i-determine-the-total-size-of-a-directory-folder-from-the-command-line
 [5] : http://askubuntu.com/questions/34099/find-number-of-files-in-folder-and-sub-folders
 [6] : http://superuser.com/questions/275502/how-to-get-information-about-an-image-picture-from-the-linux-command-line
+[7] : https://www.cyberciti.biz/faq/linux-list-users-command/
+[8] : http://www.imagemagick.org/script/command-line-processing.php#geometry
+[9] : http://www.imagemagick.org/script/command-line-options.php#crop
+
 
 
