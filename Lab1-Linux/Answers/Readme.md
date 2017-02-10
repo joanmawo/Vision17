@@ -20,7 +20,6 @@ The -C attribute allows us to unzip the .tgz file in a different directory. [3]
 14. The uncompressed dataset takes 75M in disk. This was verified by means of the following command, disk usage:
 du -hs ./BSDS500
 The attributes -h and -s stand for 'human readable' and 'summary' [4].
-
 There are 503 image files within the dataset. These images are contained within the directory /BSR/BSDS500/data/images
 To get the number of image files we performed the following command on the terminal:
 ls -lR | grep ^- | wc -l
