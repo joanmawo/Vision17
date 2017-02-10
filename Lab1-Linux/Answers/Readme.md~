@@ -26,7 +26,7 @@ Which is a method to count files recursively within a directory's subdirectories
 15. Image files are in JPEG format. Their resolution (the number of pixels) can be found out through the package 'convert' from ImageMagick. First, we need to install ImageMakgick via apt-get install imagemagick. Then, we may perform the following command:
 convert 236017.jpg -print "Size: %wx%h\n" /dev/null, which returns the number of pixels of the image; 481x321 in this case [6].
 16. To know how many of these images have landscape orientation we may write a script which gets the size of each image file, such as in the previous question. The script would count only when the first dimension is greater than the second one. The resulting count will correspond to the number of landscape images, while the number of portrait images may be calculated substracting this number from the total number of images (square photographs will be considered portraits).
-17. From the imagemagick package, we can use the 'mogrify' program to crop all files 
+17. 
 
 
 References
